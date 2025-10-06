@@ -18,9 +18,6 @@ local function is_finded(e)
 	return luci.sys.exec(string.format('type -t -p "%s" 2>/dev/null', e)) ~= ""
 end
 
-local function is_installed(e)
-	return luci.model.ipkg.installed(e)
-end
 
 -- 判断系统是否 JS 版 LuCI
 local function is_js_luci()
